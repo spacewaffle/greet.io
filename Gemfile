@@ -10,7 +10,7 @@ group :development do
 end
 
 gem 'devise'
-gem 'simlple_form'
+gem 'simple_form'
 
 group :production do
   gem 'pg'
