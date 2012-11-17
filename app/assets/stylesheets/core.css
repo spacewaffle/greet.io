@@ -1,9 +1,11 @@
 body{
-
+  font-family: Helvetica Neue, Helvetica, Arial, Tahoma, sans-serif;
+  text-align: center;
 }
 
 a{
   text-decoration: none;
+  color: #fff;
 }
 
 .main_logo{
@@ -12,7 +14,22 @@ a{
 }
 
 .btn{
-  display: block;
-  padding: 3px;
+  display: inline-block;
+  padding: 4px 10px;
   background-color: #00dea5;
+  border-radius: 4px;
+
+}
+
+.signup_button{
+  margin-right: 15px;
+}
+
+.login_buttons, .tagline{
+    margin-top: 20px;
+}
+
+.centered{
+  margin: 0 auto;
+  text-align: center;
 }
