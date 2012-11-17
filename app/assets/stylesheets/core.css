@@ -3,7 +3,7 @@ body{
   text-align: center;
 }
 
-a{
+a, a:visited{
   text-decoration: none;
   color: #fff;
 }
@@ -32,4 +32,8 @@ a{
 .centered{
   margin: 0 auto;
   text-align: center;
+}
+
+.tagline{
+  font-weight: bold;
 }
