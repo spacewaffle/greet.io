@@ -14,31 +14,38 @@
 ActiveRecord::Schema.define(:version => 20121117211419) do
 
   create_table "events", :force => true do |t|
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "event_name"
+    t.string   "event_code"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.datetime "archived_at"
   end
 
   create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "event_id"
+    t.integer  "user_at_event_ids"
+    t.string   "tag"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "user_at_events", :force => true do |t|
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.datetime "archived_at"
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "email"
+    t.string   "password"
+    t.datetime "registered_at"
+    t.datetime "archived_at"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end
