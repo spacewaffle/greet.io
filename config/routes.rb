@@ -1,5 +1,7 @@
 GreetIo::Application.routes.draw do
   
+  devise_for :users
+
   resources :tags
 
   resources :user_at_events
