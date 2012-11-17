@@ -10,6 +10,5 @@
  *
  *= require_self
  *= require_tree .
-*= require yui3reset
  *= require core
  */
