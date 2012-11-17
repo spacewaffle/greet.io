@@ -8,7 +8,7 @@ GreetIo::Application.routes.draw do
 
 
   resources :events
-  root to: 'events#index'
+  # root to: 'events#index'
 
   root :to => 'static_pages#home'
 
