@@ -8,6 +8,13 @@ a, a:visited{
   color: #fff;
 }
 
+h1{
+  margin-top: 20px;
+  color: #00DEA5;
+  font-weight: bold;
+  font-size: 35px;
+}
+
 .main_logo{
   display: block;
   margin: 0 auto;
@@ -37,4 +44,9 @@ a, a:visited{
 .tagline{
   font-weight: bold;
   color: #00dea5;
+}
+
+.user_image{
+  height: 125px;
+  width: 125px;
 }
