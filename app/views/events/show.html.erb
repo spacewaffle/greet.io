@@ -1,11 +1,15 @@
 <h1>Angelhack Boston 11/14<%= @event.name %></h1>
 <p class="add_info">(to join, add some info so people can find you)</p>
 
-<%= simple_form_for @event do |f| %>
-  <%= image_tag "rails.png", class:"user_image"%>
-  <%= f.button :upload %>
-  <%= f.association :tag , as: :text_fields %>
-  <%= f.association :tag , as: :text_fields %>
-  <%= f.association :tag , as: :text_fields %>
-  <%= f.button :submit %>
+
+<%= form_for @event, :url => events_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+  f.simple_fields_for @event do |f| %>
+    <%= image_tag "rails.png", class:"user_image"%>
+    <%= f.button :upload %>
+    <%= f.association :tag , as: :text_fields %>
+    <%= f.association :tag , as: :text_fields %>
+    <%= f.association :tag , as: :text_fields %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>
