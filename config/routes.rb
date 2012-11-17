@@ -1,5 +1,13 @@
 GreetIo::Application.routes.draw do
   
+  resources :tags
+
+  resources :user_at_events
+
+  resources :users
+
+  resources :events
+
   get "static_pages/home"
 
   # The priority is based upon order of creation:
